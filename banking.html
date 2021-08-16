@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My bank info</title>
+      <!-- //tailwind css stylesheet  -->
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="text-5xl mt-4 text-center">My Bank <span class="text-purple-600">Account</span></h1>
+    
+    <section class="w-4/5 mx-auto">
+        <!-- ... Diposit  -->
+        <div class="grid grid-cols-3 gap-4 mt-8">
+            <div class="bg-yellow-300 p-6">
+                <h1 class="text-2xl">Diposit</h1>
+                <h2 class="text-4xl">$<span id="diposit_amount_display">00</span></h2>
+            </div>
+            <!-- ...withdraw -->
+            <div class="bg-pink-300 p-6">
+                <h1 class="text-2xl">withdraw</h1>
+                <h2 class="text-4xl">$<span id="withdraw_amount_display">00</span></h2>
+            </div>
+            <!-- Balance  -->
+            <div class="bg-green-300 p-6">
+                <h1 class="text-2xl">Balance</h1>
+                <h2 class="text-4xl">$<span id="balance_amount_display">1240</span></h2>
+            </div>
+          </div>
+          
+    </section>
+
+    <!-- // withdraw and deposite option section -->
+    <section class="w-4/5 mx-auto">
+        <div class="grid grid-cols-2 gap-4 mt-6">
+            <!-- //diposit section  -->
+            <div class="bg-gray-300 p-6">
+                <!-- //deposite input  -->
+                <input class="block border mt-2 w-3/4 px-2 rounded" type="text" name="" id="diposit_input" placeholder="Enter your diposit Amount">
+                <!-- diposit button  -->
+                <button id="diposit_btn" class="bg-indigo-500 px-6 py-2 mt-2 rounded text-white ">Diposit</button>
+            </div>
+                
+            <!-- ...withdraw section -->
+            <div class="bg-indigo-300 p-6">
+                 <!-- //Withdraw input  -->
+                 <input class="block border mt-2 w-3/4 px-2 rounded" type="text" name="" id="withdraw_input" placeholder="Enter your diposit Amount">
+                 <!-- Withdraw button  -->
+                 <button id="withdraw_btn" class="bg-indigo-500 px-6 py-2 mt-2 rounded text-white ">Withdraw</button>
+            </div>
+          </div>
+          
+    </section>
+
+    <!-- js script import  -->
+    <script src="js/banking.js"></script>
+</body>
+</html>
