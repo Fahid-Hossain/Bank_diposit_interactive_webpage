@@ -1,13 +1,30 @@
+// get Input function 
+function getInputId(inputId){
+  const inputField = document.getElementById(inputId);
+  const inputValue = inputField.value;
+  const inputValueConverted = parseFloat(inputValue);
+  inputField.value = "";
+  return inputValueConverted;
+}
+
+// get display diposit and withdraw function 
+/* function getDisplayId(displayId){
+  const displayAmount = document.getElementById(displayId);
+  const displayAmountText = displayAmount.innerText;
+  const displayAmountConverted = parseFloat(displayAmountText);
+  return displayAmountConverted;
+}
+ */
 // ----Diposit >> get diposit ----------//-- 
 document.getElementById("diposit_btn").addEventListener("click",function(){
     // get diposit input 
-    const dipositInput = document.getElementById("diposit_input");
+/*     const dipositInput = document.getElementById("diposit_input");
     const dipositAmount = dipositInput.value;
     const dipositAmountConverted = parseFloat(dipositAmount);
     // console.log(dipositAmountConverted);
     //clear diposit input value
-    dipositInput.value = "";
-
+    dipositInput.value = ""; */
+    const dipositAmountConverted = getInputId("diposit_input");
     // diposit amount display 
     const dipositAmountDisplay = document.getElementById("diposit_amount_display");
     const dipositAmountText = dipositAmountDisplay.innerText;
@@ -37,13 +54,15 @@ document.getElementById("diposit_btn").addEventListener("click",function(){
 
 document.getElementById("withdraw_btn").addEventListener("click",function(){
     // get withdraw input 
-    const withdrawInput = document.getElementById("withdraw_input");
+/*     const withdrawInput = document.getElementById("withdraw_input");
     const withdrawAmountText = withdrawInput.value;
     const withdrawAmountConverted = parseFloat(withdrawAmountText);
     // console.log(withdrawAmountConverted);
 
     // clear withdraw input value
-    withdrawInput.value = "";
+    withdrawInput.value = ""; */
+
+    const withdrawAmountConverted = getInputId("withdraw_input");
 
     // get withdraw Amount
     const withdrawAmountDisplay = document.getElementById("withdraw_amount_display");
